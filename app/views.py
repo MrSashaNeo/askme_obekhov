@@ -3,17 +3,16 @@ from tempfile import template
 
 from django.http import HttpResponse
 from django.shortcuts import render
-from urllib3 import request
+
 
 
 QUESTIONS = [
       {
-            'title': f'Title {i}',
+            'title': f'Title #{i}',
             'id':i,
-            'text': f'This is text for questions # {i}'
+            'text': f'This is text for questions #{i}'
       } for i in range(30)
 ]
-
 
 
 
