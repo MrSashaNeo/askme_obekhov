@@ -4,7 +4,7 @@ from tempfile import template
 from django.http import HttpResponse
 from django.shortcuts import render
 from urllib3 import request
-from django.core.paginator import Paginator, PageNotInteger,EmptyPage
+
 
 QUESTIONS = [
       {
@@ -18,14 +18,9 @@ QUESTIONS = [
 
 
 def index(request):
-
-      page_num = int(request.GET.get('page', 1))
-      paginator = Paginator(QUESTIONS, 5)
-      page = paginator.page(page_num)
-
       return render(
             request, 'index.html',
-            context={'questions': page.objet_list, 'page_obj': page}
+            context={'questions': QUESTIONS}
       )
 
 def hot(request):

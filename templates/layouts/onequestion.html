@@ -1,0 +1,39 @@
+{% load static %}
+
+<div class="card w-100" style="width: 18rem;">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-3">
+                    <div class="border mb-2" style="height: 100px">
+                      <img src="{% static 'img/rei.jpg' %}" alt="Avatar" class="img-fluid">
+                    </div>
+
+
+                    <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                  </div>
+
+
+                  <div class="col-9">
+                    <h5 class="card-title">
+                      <a href="/question.html">{{ question.title }}</a>
+                    </h5>
+                    <p class="card-text">
+                      {{ question.text }}
+                    </p>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="card-link">Answer (3)</a>
+                      <div class="d-flex flex-wrap gap-2">
+                        <div>
+                          Tags:
+                        </div>
+                        <a href="#" class="card-link m-0">Another link</a>
+                        <a href="#" class="card-link m-0">Another link</a>
+                        <a href="#" class="card-link m-0">Another link</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+</div>
