@@ -5,6 +5,7 @@
         <div class="d-flex gap-3 align-items-center">
           <h1>Hot Questions</h1>
           <a href="{% url 'index' %}">New Questions</a>
+            <a href="{% url 'ask' %}">Ask Question</a>
         </div>
 
         <div class="col-8">
@@ -18,5 +19,8 @@
 
           </div>
 
+        {% include 'layouts/pagination.html' %}
         </div>
+
+
 {% endblock %}
